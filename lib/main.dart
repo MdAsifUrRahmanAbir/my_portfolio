@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/my_home/view/my_home_page.dart';
+import 'under_constructions_part/under_construction.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,10 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Portfolio',
+      title: 'AbirDev',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: MyHomePage(),
+      home: const UnderConstructionScreen(),
     );
   }
 }
