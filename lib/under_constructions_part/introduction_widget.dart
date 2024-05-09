@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+import 'animated_text.dart';
 
 class IntroductionWidget extends StatefulWidget {
   const IntroductionWidget({super.key});
@@ -10,20 +13,21 @@ class IntroductionWidget extends StatefulWidget {
 class IntroductionWidgetState extends State<IntroductionWidget>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  late Animation<int> _animation;
+  late Animation<double> _animation;
 
   @override
   void initState() {
     super.initState();
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 3),
     );
-    _animation =
-        IntTween(begin: 0, end: "Developer".length).animate(_controller)
-          ..addListener(() {
-            setState(() {});
-          });
+
+    _animation = Tween<double>(begin: 0, end: 9).animate(_controller)
+      ..addListener(() {
+        setState(() {});
+      });
+
     _controller.forward();
   }
 
@@ -41,26 +45,66 @@ class IntroductionWidgetState extends State<IntroductionWidget>
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const Text(
-            'Name: Md Asif Ur Rahman Abir',
-            style: TextStyle(fontSize: 18),
+            'Name:',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 5),
           const Text(
-            'Currently job in AppDevs ltd',
+            'Md Asif Ur Rahman Abir',
             style: TextStyle(fontSize: 18),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 20),
           const Text(
-            'Job experience 1 and Half year',
+            'Currently Job:',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 5),
+          const Text(
+            'AppDevs Ltd',
             style: TextStyle(fontSize: 18),
           ),
-          const SizedBox(height: 10),
-          Text(
-            'Flutter ${"Developer".substring(0, _animation.value)}',
-            style: const TextStyle(fontSize: 18),
+          const SizedBox(height: 20),
+          const Text(
+            'Job Experience:',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 5),
+          const Text(
+            '1.5 years',
+            style: TextStyle(fontSize: 18),
+          ),
+          const SizedBox(height: 20),
+          const Text(
+            'Role:',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(height: 5),
+          const AnimatedTextWidget(text: 'Flutter Developer',),
+
+          const SizedBox(height: 20),
+          InkWell(
+            onTap: () {
+              _launchWhatsAppWeb('01877348044');
+            },
+            child: const Text(
+              'WhatsApp: 01877348044 (Click to open WhatsApp web)',
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.white,
+                decoration: TextDecoration.underline,
+                fontWeight: FontWeight.w900
+              ),
+            ),
           ),
         ],
       ),
     );
+  }
+
+  void _launchWhatsAppWeb(String phoneNumber) async {
+    final url = 'https://web.whatsapp.com/send?phone=$phoneNumber';
+    if (!await launchUrl(Uri.parse(url))) {
+      throw Exception('Could not launch $url');
+    }
   }
 }

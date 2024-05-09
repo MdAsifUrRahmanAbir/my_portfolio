@@ -81,23 +81,23 @@ class _UnderConstructionScreenState extends State<UnderConstructionScreen>
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SocialMediaButton(
-                        icon: Icons.public,
-                        link: 'https://www.linkedin.com/in/yourProfile',
+                        icon: Icons.whatshot,
+                        link: 'https://www.linkedin.com/in/md-asif-ur-rahman-abir-3ab156159/',
                         color: Color(0xFF0077B5),
                       ),
                       SocialMediaButton(
                         icon: Icons.public,
-                        link: 'https://github.com/yourUsername',
+                        link: 'https://github.com/AbirAppDevs',
                         color: Color(0xFF333333),
                       ),
                       SocialMediaButton(
-                        icon: Icons.whatshot,
-                        link: 'https://wa.me/phoneNumber',
+                        icon: Icons.public,
+                        link: 'https://github.com/MdAsifUrRahmanAbir',
                         color: Color(0xFF25D366),
                       ),
                       SocialMediaButton(
                         icon: Icons.facebook,
-                        link: 'https://www.facebook.com/yourPage',
+                        link: 'https://www.facebook.com/abir15.10845/',
                         color: Color(0xFF3b5998),
                       ),
                     ],
