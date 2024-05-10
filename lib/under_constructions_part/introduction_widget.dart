@@ -44,42 +44,63 @@ class IntroductionWidgetState extends State<IntroductionWidget>
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Text(
-            'Name:',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 5),
-          const Text(
-            'Md Asif Ur Rahman Abir',
-            style: TextStyle(fontSize: 18),
-          ),
-          const SizedBox(height: 20),
-          const Text(
-            'Currently Job:',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 5),
-          const Text(
-            'AppDevs Ltd',
-            style: TextStyle(fontSize: 18),
+          Row(
+            children: [
+              const Text(
+                'Name: ',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+             
+              const Text(
+                'Md Asif Ur Rahman Abir',
+                style: TextStyle(fontSize: 18),
+              ),
+            ]
           ),
           const SizedBox(height: 20),
-          const Text(
-            'Job Experience:',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 5),
-          const Text(
-            '1.5 years',
-            style: TextStyle(fontSize: 18),
+          Row(
+            children: [
+              const Text(
+                'Currently Job: ',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              
+              const Text(
+                'AppDevs Ltd',
+                style: TextStyle(fontSize: 18),
+              ),
+            ]
           ),
           const SizedBox(height: 20),
-          const Text(
-            'Role:',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          Row(
+            children: [
+              const Text(
+                'Job Experience: ',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              
+              const Text(
+                '1.5 years',
+                style: TextStyle(fontSize: 18),
+              ),
+            ]
           ),
-          const SizedBox(height: 5),
-          const AnimatedTextWidget(text: 'Flutter Developer',),
+          const SizedBox(height: 20),
+
+          Row(
+            children: [
+              const Text(
+                'Role: ',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+
+              const Text(
+                'Flutter Developer',
+                style: TextStyle(fontSize: 18),
+              ),
+              //const AnimatedTextWidget(text: 'Flutter Developer',),
+            ]
+          ),
 
           const SizedBox(height: 20),
           InkWell(
