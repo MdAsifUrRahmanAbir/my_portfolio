@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'animated_text.dart';
 
 class IntroductionWidget extends StatefulWidget {
   const IntroductionWidget({super.key});
@@ -13,7 +12,6 @@ class IntroductionWidget extends StatefulWidget {
 class IntroductionWidgetState extends State<IntroductionWidget>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  late Animation<double> _animation;
 
   @override
   void initState() {
@@ -22,12 +20,7 @@ class IntroductionWidgetState extends State<IntroductionWidget>
       vsync: this,
       duration: const Duration(seconds: 3),
     );
-
-    _animation = Tween<double>(begin: 0, end: 9).animate(_controller)
-      ..addListener(() {
-        setState(() {});
-      });
-
+    
     _controller.forward();
   }
 
@@ -44,42 +37,42 @@ class IntroductionWidgetState extends State<IntroductionWidget>
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Row(
+          const Row(
             children: [
-              const Text(
+              Text(
                 'Name: ',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
              
-              const Text(
+              Text(
                 'Md Asif Ur Rahman Abir',
                 style: TextStyle(fontSize: 18),
               ),
             ]
           ),
           const SizedBox(height: 20),
-          Row(
+          const Row(
             children: [
-              const Text(
+              Text(
                 'Currently Job: ',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               
-              const Text(
+              Text(
                 'AppDevs Ltd',
                 style: TextStyle(fontSize: 18),
               ),
             ]
           ),
           const SizedBox(height: 20),
-          Row(
+          const Row(
             children: [
-              const Text(
+              Text(
                 'Job Experience: ',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               
-              const Text(
+              Text(
                 '1.5 years',
                 style: TextStyle(fontSize: 18),
               ),
@@ -87,14 +80,14 @@ class IntroductionWidgetState extends State<IntroductionWidget>
           ),
           const SizedBox(height: 20),
 
-          Row(
+          const Row(
             children: [
-              const Text(
+              Text(
                 'Role: ',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
 
-              const Text(
+              Text(
                 'Flutter Developer',
                 style: TextStyle(fontSize: 18),
               ),
