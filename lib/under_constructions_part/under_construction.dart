@@ -58,50 +58,56 @@ class _UnderConstructionScreenState extends State<UnderConstructionScreen>
             child: Column(
               children: [
                 const AnimatedUnderMaintainMessage(),
-                const Spacer(),
-                Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                Expanded(
+                  child: ListView(
                     children: [
-                      const IntroductionWidget(),
-                      horizontalSpace(50),
-                      Image.asset(
-                        'assets/image/super_men.png',
-                        width: 300,
-                        height: 500,
+                      SizedBox(200)
+                      Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const IntroductionWidget(),
+                            horizontalSpace(50),
+                            Image.asset(
+                              'assets/image/super_men.png',
+                              width: 300,
+                              height: 500,
+                            ),
+                          ],
+                        ),
                       ),
-                    ],
-                  ),
-                ),
-                const Spacer(),
-                const Padding(
-                  padding: EdgeInsets.all(18.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SocialMediaButton(
-                        icon: Icons.whatshot,
-                        link: 'https://www.linkedin.com/in/md-asif-ur-rahman-abir-3ab156159/',
-                        color: Color(0xFF0077B5),
-                      ),
-                      SocialMediaButton(
-                        icon: Icons.public,
-                        link: 'https://github.com/AbirAppDevs',
-                        color: Color(0xFF333333),
-                      ),
-                      SocialMediaButton(
-                        icon: Icons.public,
-                        link: 'https://github.com/MdAsifUrRahmanAbir',
-                        color: Color(0xFF25D366),
-                      ),
-                      SocialMediaButton(
-                        icon: Icons.facebook,
-                        link: 'https://www.facebook.com/abir15.10845/',
-                        color: Color(0xFF3b5998),
-                      ),
-                    ],
-                  ),
+                      const Spacer(),
+                      const Padding(
+                        padding: EdgeInsets.all(18.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SocialMediaButton(
+                              icon: Icons.whatshot,
+                              link: 'https://www.linkedin.com/in/md-asif-ur-rahman-abir-3ab156159/',
+                              color: Color(0xFF0077B5),
+                            ),
+                            SocialMediaButton(
+                              icon: Icons.public,
+                              link: 'https://github.com/AbirAppDevs',
+                              color: Color(0xFF333333),
+                            ),
+                            SocialMediaButton(
+                              icon: Icons.public,
+                              link: 'https://github.com/MdAsifUrRahmanAbir',
+                              color: Color(0xFF25D366),
+                            ),
+                            SocialMediaButton(
+                              icon: Icons.facebook,
+                              link: 'https://www.facebook.com/abir15.10845/',
+                              color: Color(0xFF3b5998),
+                            ),
+                          ],
+                        ),
+                      )
+                    ]
+                  )
                 )
               ],
             ),
