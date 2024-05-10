@@ -61,7 +61,7 @@ class _UnderConstructionScreenState extends State<UnderConstructionScreen>
                 Expanded(
                   child: ListView(
                     children: [
-                      SizedBox(200)
+                      const SizedBox(height: 200),
                       Padding(
                         padding: const EdgeInsets.all(20.0),
                         child: Row(
@@ -77,7 +77,7 @@ class _UnderConstructionScreenState extends State<UnderConstructionScreen>
                           ],
                         ),
                       ),
-                      const Spacer(),
+                      const SizedBox(height: 200),
                       const Padding(
                         padding: EdgeInsets.all(18.0),
                         child: Row(
@@ -105,7 +105,8 @@ class _UnderConstructionScreenState extends State<UnderConstructionScreen>
                             ),
                           ],
                         ),
-                      )
+                      ),
+                      const SizedBox(height: 70),
                     ]
                   )
                 )
