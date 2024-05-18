@@ -16,7 +16,7 @@ class CustomColor{
   static const Color secondaryLightColor = Color(0xFF0D102F);
   
   static const Color primaryBGLightColor = Color(0xFFF4F6FC);
-  static const Color primaryLightScaffoldBackgroundColor = Color(0xFFFFFFFF);
+  static const Color primaryLightScaffoldBackgroundColor = Colors.white;
   
   static const Color primaryLightTextColor = Color(0xFF111111);
   static const Color secondaryLightTextColor = Color(0xFFF8F8F8);

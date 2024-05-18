@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'under_constructions_part/under_construction.dart';
+import 'screens/dashboard/view/dashboard_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,8 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'AbirDev',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
-      home: const UnderConstructionScreen(),
+      theme: ThemeData.light(),
+      home: const PortfolioHomePage(),
     );
   }
 }

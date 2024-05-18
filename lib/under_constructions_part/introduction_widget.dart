@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../constants/proccess.dart';
+
 
 class IntroductionWidget extends StatefulWidget {
   const IntroductionWidget({super.key});
@@ -98,7 +100,7 @@ class IntroductionWidgetState extends State<IntroductionWidget>
           const SizedBox(height: 20),
           InkWell(
             onTap: () {
-              _launchWhatsAppWeb('01877348044');
+              launchWhatsAppProcess('01877348044');
             },
             child: const Text(
               'WhatsApp: 01877348044 (Click to open WhatsApp web)',
@@ -113,12 +115,5 @@ class IntroductionWidgetState extends State<IntroductionWidget>
         ],
       ),
     );
-  }
-
-  void _launchWhatsAppWeb(String phoneNumber) async {
-    final url = 'https://web.whatsapp.com/send?phone=$phoneNumber';
-    if (!await launchUrl(Uri.parse(url))) {
-      throw Exception('Could not launch $url');
-    }
   }
 }

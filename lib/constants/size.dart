@@ -24,4 +24,5 @@ CrossAxisAlignment crossEnd = CrossAxisAlignment.end;
 CrossAxisAlignment crossStretch = CrossAxisAlignment.stretch;
 
 
-const double minDesktopWidth = 600.00;
+const double minTabWidth = 600.00;
+const double minDesktopWidth = 1024.00;
