@@ -109,38 +109,59 @@ class PortfolioHomePage extends StatelessWidget {
   }
   
   _buildDesktopLayout(BuildContext context){
-    return Row(
+    return const Row(
       children: [
         // Left side
-        const Expanded(
+        Expanded(
           flex: 2,
           child: BasicInfoWidget()
         ),
         // Right side
         Expanded(
           flex: 3,
-          child: GridView.count(
-            crossAxisCount: 2,
-            children: const [
-              PortfolioItem(
-                color: Colors.blue,
-                icon: Icons.diamond,
-                title: 'About',
+          child: Column(
+            // crossAxisCount: 2,
+            // direction: Axis.horizontal,
+            children: [
+              Expanded(
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: PortfolioItem( 
+                        color: Colors.blue,
+                        icon: Icons.diamond,
+                        title: 'About',
+                      ),
+                    ),
+                    Expanded(
+                      child: PortfolioItem(
+                        color: Colors.red,
+                        icon: Icons.flash_on,
+                        title: 'Services',
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              PortfolioItem(
-                color: Colors.red,
-                icon: Icons.flash_on,
-                title: 'Services',
-              ),
-              PortfolioItem(
-                color: Colors.orange,
-                icon: Icons.contact_mail,
-                title: 'Contact',
-              ),
-              PortfolioItem(
-                color: Colors.purple,
-                icon: Icons.emoji_events,
-                title: 'Portfolio',
+              Expanded( 
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: PortfolioItem(
+                        color: Colors.orange,
+                        icon: Icons.contact_mail,
+                        title: 'Contact',
+                      ),
+                    ),
+                    Expanded(
+                      child: PortfolioItem( 
+                        color: Colors.purple,
+                        icon: Icons.emoji_events,
+                        title: 'Portfolio',
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
